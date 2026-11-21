@@ -22,7 +22,7 @@ import chikuta from "./places/techou/art/chikuta.webp";
 import pen from "./places/sakubun/art/pen.webp";
 
 /* けいさんプリンセスの 場所（本番の URL に かえる） */
-export const KEISAN_URL = "https://play.google.com/store/apps/details?id=jp.pitchpt.keisanprincess";
+export const KEISAN_URL = "https://pitchipt-dotcom-keisan-princess.vercel.app/";
 
 const PLACES = [
   { id: "naze", label: "考える 森", sub: "なぜ？カード・言ばの はしご", who: "ルゥ", art: ruu, color: "#3FA04F", bg: "#ECF8E6", App: NazeApp },
