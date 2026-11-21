@@ -1,0 +1,150 @@
+/* なぜなぜのもり — けいさんプリンセスと そろえた まるい ふんいき（もりの みどり） */
+.pl-naze * { box-sizing: border-box; }
+.pl-naze .__none, .pl-naze .__none, .pl-naze .__none { margin: 0; padding: 0; min-height: 100%; }
+.pl-naze .__none { background: #EEF6E2; }
+.pl-naze .__none {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', 'BIZ UDPGothic', sans-serif;
+  color: #2E3B2A;
+  background: radial-gradient(circle at 20% 0%, #FFF8E8 0%, #FDF0DE 40%, #E6F4D8 100%) fixed;
+}
+.pl-naze button { font-family: inherit; cursor: pointer; touch-action: manipulation; }
+.pl-naze .shell { max-width: 520px; margin: 0 auto; padding: max(12px, env(safe-area-inset-top)) 14px calc(24px + env(safe-area-inset-bottom)); }
+.pl-naze .screen { display: flex; flex-direction: column; gap: 14px; align-items: stretch; }
+
+.pl-naze .title { font-family: 'Mochiy Pop One', sans-serif; font-size: 28px; text-align: center; margin: 4px 0 0; color: #2F5D3A;
+  text-shadow: 0 3px 0 #fff, 0 5px 0 rgba(127,208,106,.5); letter-spacing: .04em; }
+
+/* ルゥと ふきだし */
+.pl-naze .hero { display: flex; align-items: flex-end; gap: 6px; }
+.pl-naze .ruu-home { width: 128px; flex: none; filter: drop-shadow(0 6px 0 rgba(47,93,58,.15)); animation: float 3.2s ease-in-out infinite; }
+.pl-naze .bubble { position: relative; background: #fff; border: 3px solid #7FD06A; border-radius: 20px; padding: 10px 14px; font-weight: 900;
+  font-size: 15px; line-height: 1.7; box-shadow: 0 5px 0 rgba(127,208,106,.35); }
+.pl-naze .hero .bubble { flex: 1; margin-bottom: 40px; }
+.pl-naze .hero .bubble::before { content: ""; position: absolute; left: -12px; bottom: 18px; border: 8px solid transparent; border-right-color: #7FD06A; border-left: 0; }
+.pl-naze .bubble.big { font-size: 17px; text-align: center; }
+.pl-naze .bubble b { color: #E8618C; font-size: 1.2em; }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+/* メニュー */
+.pl-naze .menu { display: flex; flex-direction: column; gap: 10px; }
+.pl-naze .menu-btn { display: flex; align-items: center; gap: 12px; text-align: left; background: #fff; border: 3px solid #C9E7B8; border-radius: 22px;
+  padding: 14px 16px; box-shadow: 0 6px 0 #A9D392; transition: transform .06s; color: #2E3B2A; }
+.pl-naze .menu-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 #A9D392; }
+.pl-naze .menu-btn.main { background: linear-gradient(135deg, #FFE7F0, #FFF6D8); border-color: #FF9EC4; box-shadow: 0 6px 0 #E8618C; }
+.pl-naze .menu-btn b { display: block; font-family: 'Mochiy Pop One', sans-serif; font-size: 19px; color: #2F5D3A; }
+.pl-naze .menu-btn small { display: block; font-size: 13px; color: #6B7A62; font-weight: 700; margin-top: 2px; }
+.pl-naze .menu-icon { font-size: 34px; }
+
+.pl-naze .plan { background: #fff; border: 3px dashed #F2A93B; border-radius: 18px; padding: 10px 14px; font-weight: 700; }
+.pl-naze .plan-title { font-family: 'Mochiy Pop One', sans-serif; color: #C9821B; margin-bottom: 4px; }
+.pl-naze .plan-item { font-size: 15px; line-height: 1.9; }
+.pl-naze .plan-item small { color: #8A7A5A; }
+.pl-naze .plan-item.ok { color: #2FAF8E; }
+
+.pl-naze .cat-pick { background: #fff; border: 3px solid #FF9EC4; border-radius: 22px; padding: 12px; box-shadow: 0 6px 0 #E8618C; }
+.pl-naze .cat-pick-title { font-weight: 900; text-align: center; margin-bottom: 8px; color: #C0568A; }
+.pl-naze .cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.pl-naze .cat-btn { background: #FFF6FB; border: 2px solid #FFC6DD; border-radius: 16px; padding: 10px 4px; font-weight: 900; font-size: 14px; line-height: 1.6; color: #2E3B2A; }
+
+/* 木 */
+.pl-naze .tree-card { display: flex; align-items: center; gap: 4px; background: rgba(255,255,255,.75); border: 3px solid #C9E7B8; border-radius: 24px; padding: 6px 12px; }
+.pl-naze .tree-info { display: flex; flex-direction: column; gap: 6px; }
+.pl-naze .tree-name { font-family: 'Mochiy Pop One', sans-serif; font-size: 20px; color: #2F5D3A; }
+.pl-naze .mi-count { font-weight: 900; display: flex; align-items: center; gap: 6px; }
+.pl-naze .tree-next { font-size: 13px; font-weight: 700; color: #6B7A62; }
+.pl-naze .mi-dot { display: inline-block; width: 18px; height: 18px; border-radius: 50%; background: radial-gradient(circle, #FFF7B0, #FFD84D 60%, #F2A93B);
+  border: 2px solid #C9821B; box-shadow: 0 0 10px #FFE27A; }
+.pl-naze .tree-fruit { animation: twinkle 2.4s ease-in-out infinite; }
+@keyframes twinkle { 0%,100% { opacity: 1; } 50% { opacity: .65; } }
+
+/* スタンプ */
+.pl-naze .stamp-card { background: #fff; border: 3px solid #FFD84D; border-radius: 22px; padding: 10px 12px; }
+.pl-naze .stamp-head { display: flex; justify-content: space-between; align-items: center; font-weight: 900; margin-bottom: 8px; }
+.pl-naze .streak { background: #F2A93B; color: #fff; border-radius: 999px; padding: 2px 10px; font-size: 13px; }
+.pl-naze .stamps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.pl-naze .stamp { aspect-ratio: 1; border: 2px dashed #E9D9A0; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  color: #D8C78A; font-weight: 900; font-size: 14px; }
+.pl-naze .stamp.on { border: 2px solid #7FD06A; background: #EFFBE7; font-size: 24px; }
+
+.pl-naze .parent-link { align-self: center; background: none; border: none; color: #6B7A62; font-weight: 700; font-size: 14px; padding: 8px; text-decoration: underline; }
+
+/* 上の バー */
+.pl-naze .topbar { display: flex; justify-content: space-between; align-items: center; }
+.pl-naze .btn-back { background: #fff; border: 2px solid #C9E7B8; border-radius: 999px; padding: 6px 14px; font-weight: 900; color: #2F5D3A; }
+.pl-naze .cat-tag { background: #fff; border-radius: 999px; padding: 4px 12px; font-weight: 900; font-size: 13px; color: #2F5D3A; }
+
+/* しつもん カード */
+.pl-naze .qcard { background: #fff; border: 4px solid #E8618C; border-radius: 26px; padding: 30px 16px 14px; position: relative; text-align: center;
+  box-shadow: 0 7px 0 rgba(47,93,58,.15); margin-top: 12px; }
+.pl-naze .qkind { position: absolute; top: -16px; left: 50%; transform: translateX(-50%); color: #fff; font-family: 'Mochiy Pop One', sans-serif;
+  font-size: 17px; padding: 4px 18px; border-radius: 999px; white-space: nowrap; }
+.pl-naze .qtext { font-family: 'Mochiy Pop One', sans-serif; font-size: 22px; line-height: 1.6; color: #2E3B2A; word-break: keep-all; overflow-wrap: anywhere; }
+.pl-naze .q-prev { font-size: 13px; color: #8A8A7A; font-weight: 700; margin-bottom: 6px; }
+.pl-naze .btn-speak { margin-top: 10px; background: #F4FBEF; border: 2px solid #C9E7B8; border-radius: 999px; padding: 4px 14px; font-weight: 900; color: #2F5D3A; }
+
+.pl-naze .bubble-row { display: flex; align-items: center; gap: 6px; }
+.pl-naze .ruu-mini { width: 74px; flex: none; }
+.pl-naze .bubble-row .bubble { flex: 1; font-size: 14px; }
+
+/* こたえる はこ */
+.pl-naze .ab { display: flex; flex-direction: column; gap: 10px; }
+.pl-naze .ab-mic { display: flex; align-items: center; justify-content: center; gap: 8px; background: #fff; border: 3px solid #3FA7D6; color: #1F6F94;
+  border-radius: 22px; padding: 14px; font-weight: 900; font-size: 18px; box-shadow: 0 5px 0 #2C82AA; }
+.pl-naze .ab-mic.on { background: #E5F5FC; animation: pulse 1s ease-in-out infinite; }
+.pl-naze .ab-mic-icon { font-size: 26px; }
+@keyframes pulse { 0%,100% { box-shadow: 0 5px 0 #2C82AA, 0 0 0 0 rgba(63,167,214,.5); } 50% { box-shadow: 0 5px 0 #2C82AA, 0 0 0 10px rgba(63,167,214,0); } }
+.pl-naze .ab-text { width: 100%; border: 3px solid #E2E8D8; border-radius: 16px; padding: 10px 12px; font-family: inherit; font-size: 17px; font-weight: 700; resize: vertical; background: #fff; }
+.pl-naze .ab-text.code { font-size: 12px; font-family: monospace; }
+.pl-naze .ab-note { font-size: 14px; font-weight: 700; color: #C0568A; text-align: center; line-height: 1.6; }
+.pl-naze .ab-row { display: flex; gap: 8px; }
+.pl-naze .ab-row > * { flex: 1; }
+
+.pl-naze .btn { border-radius: 18px; padding: 12px 10px; font-weight: 900; font-size: 16px; border: 3px solid transparent; transition: transform .06s; }
+.pl-naze .btn:active { transform: translateY(3px); }
+.pl-naze .btn-main { background: #FF8FC4; border-color: #E8618C; color: #fff; font-family: 'Mochiy Pop One', sans-serif; font-size: 20px; box-shadow: 0 5px 0 #C94D8C; }
+.pl-naze .btn-main:disabled { background: #F3D3E2; border-color: #EBC0D4; box-shadow: 0 5px 0 #DDB0C6; color: #fff; }
+.pl-naze .btn-sub { background: #fff; border-color: #C9E7B8; color: #2F5D3A; box-shadow: 0 4px 0 #A9D392; font-size: 14px; }
+.pl-naze .btn-link { background: none; border: none; color: #6B7A62; text-decoration: underline; font-weight: 700; font-size: 14px; padding: 6px; }
+
+/* おわり */
+.pl-naze .done { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+.pl-naze .ruu-big { width: 180px; }
+.pl-naze .mi-gain { display: flex; gap: 10px; }
+.pl-naze .mi-gain .mi-dot { width: 34px; height: 34px; }
+.pl-naze .pop { animation: pop .5s cubic-bezier(.2,1.6,.4,1) both; }
+@keyframes pop { from { transform: scale(0); } to { transform: scale(1); } }
+
+/* はしご */
+.pl-naze .ladder { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 8px 0;
+  background: linear-gradient(90deg, transparent 22%, #C9A27A 22%, #C9A27A 25%, transparent 25%, transparent 75%, #C9A27A 75%, #C9A27A 78%, transparent 78%); }
+.pl-naze .rung { width: 62%; text-align: center; background: #F1E2CF; border: 3px solid #B88A5A; border-radius: 12px; padding: 8px; font-weight: 900; font-size: 18px; color: #B88A5A; }
+.pl-naze .rung.shown { background: #fff; color: #2E3B2A; border-color: #7A5CC8; animation: pop .4s both; }
+.pl-naze .choices { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.pl-naze .choice { background: #FBF7FF; border: 3px solid #C9A8F0; border-radius: 16px; padding: 12px; font-weight: 900; font-size: 19px; color: #3A2A6B; box-shadow: 0 4px 0 #A98BD6; }
+.pl-naze .choice.shake { animation: shake .4s; border-color: #FF9EC4; }
+@keyframes shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+
+/* おうちのひと */
+.pl-naze .psec { background: #fff; border-radius: 20px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; border: 2px solid #E2E8D8; }
+.pl-naze .psec h3 { margin: 0; font-size: 16px; color: #2F5D3A; }
+.pl-naze .ptip-q { font-weight: 900; font-size: 16px; }
+.pl-naze .ptip { background: #F4FBEF; border-radius: 12px; padding: 8px 10px; font-weight: 700; line-height: 1.7; }
+.pl-naze .pnote { font-size: 13px; line-height: 1.8; color: #556050; font-weight: 500; }
+.pl-naze .pnote.small { font-size: 12px; }
+.pl-naze .type-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.pl-naze .type-btn { background: #FAFAF6; border: 3px solid #E2E8D8; border-radius: 14px; padding: 8px; text-align: left; display: flex; flex-direction: column; gap: 4px; color: #2E3B2A; }
+.pl-naze .type-btn b { font-size: 14px; }
+.pl-naze .type-btn small { font-size: 11px; line-height: 1.6; color: #6B7A62; }
+.pl-naze .type-btn.on { border-color: #FF8FC4; background: #FFF3F8; }
+.pl-naze .log { border-top: 1px dashed #E2E8D8; padding-top: 6px; font-size: 13px; line-height: 1.7; }
+.pl-naze .log-d { color: #8A8A7A; font-size: 12px; }
+.pl-naze .log-q { font-weight: 700; }
+.pl-naze .log-a { color: #E8618C; font-weight: 900; }
+.pl-naze .log-f { font-size: 12px; }
+
+@media (max-width: 360px) {
+  .pl-naze .qtext { font-size: 19px; }
+  .pl-naze .ruu-home { width: 108px; }
+}

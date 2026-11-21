@@ -1,0 +1,20 @@
+{
+  "name": "まなびの 王国",
+  "short_name": "まなびの 王国",
+  "description": "けいさんプリンセスの 王国で、考える 力・かん字・作文・手ちょうを そだてる アプリ。",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F4ECFF",
+  "theme_color": "#3A2A6B",
+  "lang": "ja",
+  "categories": ["education", "kids"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

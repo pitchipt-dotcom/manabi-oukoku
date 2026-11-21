@@ -1,0 +1,214 @@
+/* チクタの 手ちょう — けいさんプリンセスと そろえた まるい ふんいき（時計とうの オレンジ） */
+.pl-techou * { box-sizing: border-box; }
+.pl-techou .__none, .pl-techou .__none, .pl-techou .__none { margin: 0; padding: 0; min-height: 100%; }
+.pl-techou .__none { background: #FBEADB; }
+.pl-techou .__none {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', 'BIZ UDPGothic', sans-serif;
+  color: #3A2A22;
+  background: radial-gradient(circle at 20% 0%, #FFF8E8 0%, #FDF0DE 40%, #FBE3CF 100%) fixed;
+}
+.pl-techou button { font-family: inherit; cursor: pointer; touch-action: manipulation; }
+.pl-techou .shell { max-width: 520px; margin: 0 auto; padding: max(12px, env(safe-area-inset-top)) 14px calc(24px + env(safe-area-inset-bottom)); }
+.pl-techou .screen { display: flex; flex-direction: column; gap: 14px; align-items: stretch; }
+
+.pl-techou .title { font-family: 'Mochiy Pop One', sans-serif; font-size: 28px; text-align: center; margin: 4px 0 0; color: #B8561B;
+  text-shadow: 0 3px 0 #fff, 0 5px 0 rgba(255,178,91,.5); letter-spacing: .04em; }
+
+/* ルゥと ふきだし */
+.pl-techou .hero { display: flex; align-items: flex-end; gap: 6px; }
+.pl-techou .chara-home { width: 128px; flex: none; filter: drop-shadow(0 6px 0 rgba(184,86,27,.15)); animation: float 3.2s ease-in-out infinite; }
+.pl-techou .bubble { position: relative; background: #fff; border: 3px solid #FFB25B; border-radius: 20px; padding: 10px 14px; font-weight: 900;
+  font-size: 15px; line-height: 1.7; box-shadow: 0 5px 0 rgba(255,178,91,.35); }
+.pl-techou .hero .bubble { flex: 1; margin-bottom: 40px; }
+.pl-techou .hero .bubble::before { content: ""; position: absolute; left: -12px; bottom: 18px; border: 8px solid transparent; border-right-color: #FFB25B; border-left: 0; }
+.pl-techou .bubble.big { font-size: 17px; text-align: center; }
+.pl-techou .bubble b { color: #E8618C; font-size: 1.2em; }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+/* メニュー */
+.pl-techou .menu { display: flex; flex-direction: column; gap: 10px; }
+.pl-techou .menu-btn { display: flex; align-items: center; gap: 12px; text-align: left; background: #fff; border: 3px solid #FFD9B0; border-radius: 22px;
+  padding: 14px 16px; box-shadow: 0 6px 0 #F2B47A; transition: transform .06s; color: #3A2A22; }
+.pl-techou .menu-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 #F2B47A; }
+.pl-techou .menu-btn.main { background: linear-gradient(135deg, #FFE7F0, #FFF6D8); border-color: #FF9EC4; box-shadow: 0 6px 0 #E8618C; }
+.pl-techou .menu-btn b { display: block; font-family: 'Mochiy Pop One', sans-serif; font-size: 19px; color: #B8561B; }
+.pl-techou .menu-btn small { display: block; font-size: 13px; color: #7A6252; font-weight: 700; margin-top: 2px; }
+.pl-techou .menu-icon { font-size: 34px; }
+
+.pl-techou .plan { background: #fff; border: 3px dashed #F2A93B; border-radius: 18px; padding: 10px 14px; font-weight: 700; }
+.pl-techou .plan-title { font-family: 'Mochiy Pop One', sans-serif; color: #C9821B; margin-bottom: 4px; }
+.pl-techou .plan-item { font-size: 15px; line-height: 1.9; }
+.pl-techou .plan-item small { color: #8A7A5A; }
+.pl-techou .plan-item.ok { color: #2FAF8E; }
+
+.pl-techou .cat-pick { background: #fff; border: 3px solid #FF9EC4; border-radius: 22px; padding: 12px; box-shadow: 0 6px 0 #E8618C; }
+.pl-techou .cat-pick-title { font-weight: 900; text-align: center; margin-bottom: 8px; color: #C0568A; }
+.pl-techou .cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.pl-techou .cat-btn { background: #FFF6FB; border: 2px solid #FFC6DD; border-radius: 16px; padding: 10px 4px; font-weight: 900; font-size: 14px; line-height: 1.6; color: #3A2A22; }
+
+/* 木 */
+.pl-techou .tree-card { display: flex; align-items: center; gap: 4px; background: rgba(255,255,255,.75); border: 3px solid #FFD9B0; border-radius: 24px; padding: 6px 12px; }
+.pl-techou .tree-info { display: flex; flex-direction: column; gap: 6px; }
+.pl-techou .tree-name { font-family: 'Mochiy Pop One', sans-serif; font-size: 20px; color: #B8561B; }
+.pl-techou .mi-count { font-weight: 900; display: flex; align-items: center; gap: 6px; }
+.pl-techou .tree-next { font-size: 13px; font-weight: 700; color: #7A6252; }
+.pl-techou .mi-dot { display: inline-block; width: 18px; height: 18px; border-radius: 50%; background: radial-gradient(circle, #FFF7B0, #FFD84D 60%, #F2A93B);
+  border: 2px solid #C9821B; box-shadow: 0 0 10px #FFE27A; }
+.pl-techou .tree-fruit { animation: twinkle 2.4s ease-in-out infinite; }
+@keyframes twinkle { 0%,100% { opacity: 1; } 50% { opacity: .65; } }
+
+/* スタンプ */
+.pl-techou .stamp-card { background: #fff; border: 3px solid #FFD84D; border-radius: 22px; padding: 10px 12px; }
+.pl-techou .stamp-head { display: flex; justify-content: space-between; align-items: center; font-weight: 900; margin-bottom: 8px; }
+.pl-techou .streak { background: #F2A93B; color: #fff; border-radius: 999px; padding: 2px 10px; font-size: 13px; }
+.pl-techou .stamps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.pl-techou .stamp { aspect-ratio: 1; border: 2px dashed #E9D9A0; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  color: #D8C78A; font-weight: 900; font-size: 14px; }
+.pl-techou .stamp.on { border: 2px solid #FFB25B; background: #FFF1E0; font-size: 24px; }
+
+.pl-techou .parent-link { align-self: center; background: none; border: none; color: #7A6252; font-weight: 700; font-size: 14px; padding: 8px; text-decoration: underline; }
+
+/* 上の バー */
+.pl-techou .topbar { display: flex; justify-content: space-between; align-items: center; }
+.pl-techou .btn-back { background: #fff; border: 2px solid #FFD9B0; border-radius: 999px; padding: 6px 14px; font-weight: 900; color: #B8561B; }
+.pl-techou .cat-tag { background: #fff; border-radius: 999px; padding: 4px 12px; font-weight: 900; font-size: 13px; color: #B8561B; }
+
+/* しつもん カード */
+.pl-techou .qcard { background: #fff; border: 4px solid #E8618C; border-radius: 26px; padding: 30px 16px 14px; position: relative; text-align: center;
+  box-shadow: 0 7px 0 rgba(184,86,27,.15); margin-top: 12px; }
+.pl-techou .qkind { position: absolute; top: -16px; left: 50%; transform: translateX(-50%); color: #fff; font-family: 'Mochiy Pop One', sans-serif;
+  font-size: 17px; padding: 4px 18px; border-radius: 999px; white-space: nowrap; }
+.pl-techou .qtext { font-family: 'Mochiy Pop One', sans-serif; font-size: 22px; line-height: 1.6; color: #3A2A22; word-break: keep-all; overflow-wrap: anywhere; }
+.pl-techou .q-prev { font-size: 13px; color: #8A8A7A; font-weight: 700; margin-bottom: 6px; }
+.pl-techou .btn-speak { margin-top: 10px; background: #FFF6EC; border: 2px solid #FFD9B0; border-radius: 999px; padding: 4px 14px; font-weight: 900; color: #B8561B; }
+
+.pl-techou .bubble-row { display: flex; align-items: center; gap: 6px; }
+.pl-techou .chara-mini { width: 74px; flex: none; }
+.pl-techou .bubble-row .bubble { flex: 1; font-size: 14px; }
+
+/* こたえる はこ */
+.pl-techou .ab { display: flex; flex-direction: column; gap: 10px; }
+.pl-techou .ab-mic { display: flex; align-items: center; justify-content: center; gap: 8px; background: #fff; border: 3px solid #3FA7D6; color: #1F6F94;
+  border-radius: 22px; padding: 14px; font-weight: 900; font-size: 18px; box-shadow: 0 5px 0 #2C82AA; }
+.pl-techou .ab-mic.on { background: #E5F5FC; animation: pulse 1s ease-in-out infinite; }
+.pl-techou .ab-mic-icon { font-size: 26px; }
+@keyframes pulse { 0%,100% { box-shadow: 0 5px 0 #2C82AA, 0 0 0 0 rgba(63,167,214,.5); } 50% { box-shadow: 0 5px 0 #2C82AA, 0 0 0 10px rgba(63,167,214,0); } }
+.pl-techou .ab-text { width: 100%; border: 3px solid #EFE0D2; border-radius: 16px; padding: 10px 12px; font-family: inherit; font-size: 17px; font-weight: 700; resize: vertical; background: #fff; }
+.pl-techou .ab-text.code { font-size: 12px; font-family: monospace; }
+.pl-techou .ab-note { font-size: 14px; font-weight: 700; color: #C0568A; text-align: center; line-height: 1.6; }
+.pl-techou .ab-row { display: flex; gap: 8px; }
+.pl-techou .ab-row > * { flex: 1; }
+
+.pl-techou .btn { border-radius: 18px; padding: 12px 10px; font-weight: 900; font-size: 16px; border: 3px solid transparent; transition: transform .06s; }
+.pl-techou .btn:active { transform: translateY(3px); }
+.pl-techou .btn-main { background: #FF8FC4; border-color: #E8618C; color: #fff; font-family: 'Mochiy Pop One', sans-serif; font-size: 20px; box-shadow: 0 5px 0 #C94D8C; }
+.pl-techou .btn-main:disabled { background: #F3D3E2; border-color: #EBC0D4; box-shadow: 0 5px 0 #DDB0C6; color: #fff; }
+.pl-techou .btn-sub { background: #fff; border-color: #FFD9B0; color: #B8561B; box-shadow: 0 4px 0 #F2B47A; font-size: 14px; }
+.pl-techou .btn-link { background: none; border: none; color: #7A6252; text-decoration: underline; font-weight: 700; font-size: 14px; padding: 6px; }
+
+/* おわり */
+.pl-techou .done { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+.pl-techou .chara-big { width: 180px; }
+.pl-techou .mi-gain { display: flex; gap: 10px; }
+.pl-techou .mi-gain .mi-dot { width: 34px; height: 34px; }
+.pl-techou .pop { animation: pop .5s cubic-bezier(.2,1.6,.4,1) both; }
+@keyframes pop { from { transform: scale(0); } to { transform: scale(1); } }
+
+/* はしご */
+.pl-techou .ladder { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 8px 0;
+  background: linear-gradient(90deg, transparent 22%, #C9A27A 22%, #C9A27A 25%, transparent 25%, transparent 75%, #C9A27A 75%, #C9A27A 78%, transparent 78%); }
+.pl-techou .rung { width: 62%; text-align: center; background: #F1E2CF; border: 3px solid #B88A5A; border-radius: 12px; padding: 8px; font-weight: 900; font-size: 18px; color: #B88A5A; }
+.pl-techou .rung.shown { background: #fff; color: #3A2A22; border-color: #7A5CC8; animation: pop .4s both; }
+.pl-techou .choices { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.pl-techou .choice { background: #FBF7FF; border: 3px solid #C9A8F0; border-radius: 16px; padding: 12px; font-weight: 900; font-size: 19px; color: #3A2A6B; box-shadow: 0 4px 0 #A98BD6; }
+.pl-techou .choice.shake { animation: shake .4s; border-color: #FF9EC4; }
+@keyframes shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+
+/* おうちのひと */
+.pl-techou .psec { background: #fff; border-radius: 20px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; border: 2px solid #EFE0D2; }
+.pl-techou .psec h3 { margin: 0; font-size: 16px; color: #B8561B; }
+.pl-techou .ptip-q { font-weight: 900; font-size: 16px; }
+.pl-techou .ptip { background: #FFF6EC; border-radius: 12px; padding: 8px 10px; font-weight: 700; line-height: 1.7; }
+.pl-techou .pnote { font-size: 13px; line-height: 1.8; color: #6A5446; font-weight: 500; }
+.pl-techou .pnote.small { font-size: 12px; }
+.pl-techou .type-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.pl-techou .type-btn { background: #FAFAF6; border: 3px solid #EFE0D2; border-radius: 14px; padding: 8px; text-align: left; display: flex; flex-direction: column; gap: 4px; color: #3A2A22; }
+.pl-techou .type-btn b { font-size: 14px; }
+.pl-techou .type-btn small { font-size: 11px; line-height: 1.6; color: #7A6252; }
+.pl-techou .type-btn.on { border-color: #FF8FC4; background: #FFF3F8; }
+.pl-techou .log { border-top: 1px dashed #EFE0D2; padding-top: 6px; font-size: 13px; line-height: 1.7; }
+.pl-techou .log-d { color: #8A8A7A; font-size: 12px; }
+.pl-techou .log-q { font-weight: 700; }
+.pl-techou .log-a { color: #E8618C; font-weight: 900; }
+.pl-techou .log-f { font-size: 12px; }
+
+@media (max-width: 360px) {
+  .pl-techou .qtext { font-size: 19px; }
+  .pl-techou .chara-home { width: 108px; }
+}
+
+/* ===== チクタの 手ちょう ===== */
+.pl-techou .chara-home { width: 120px; }
+.pl-techou .page { background: #FFFDF8; border: 3px solid #FFD9B0; border-radius: 22px; padding: 10px 12px 12px;
+  background-image: repeating-linear-gradient(#FFFDF8 0 47px, #F6E6D4 47px 48px); display: flex; flex-direction: column; gap: 8px; }
+.pl-techou .page-head { display: flex; justify-content: space-between; align-items: baseline; font-weight: 900; color: #B8561B; }
+.pl-techou .page-date { font-family: 'Mochiy Pop One', sans-serif; font-size: 18px; }
+.pl-techou .page-count { font-size: 15px; }
+.pl-techou .task { position: relative; display: flex; align-items: center; gap: 10px; text-align: left; background: #fff; border: 3px solid #FFD9B0; border-radius: 16px;
+  padding: 10px 12px; box-shadow: 0 4px 0 #F2B47A; color: #3A2A22; transition: transform .06s; }
+.pl-techou .task:active { transform: translateY(3px); box-shadow: 0 1px 0 #F2B47A; }
+.pl-techou .task-icon { font-size: 28px; }
+.pl-techou .task-title { flex: 1; font-weight: 900; font-size: 18px; display: flex; flex-direction: column; }
+.pl-techou .task-title small { font-size: 12px; color: #7A6252; font-weight: 700; }
+.pl-techou .task-pt { font-family: 'Mochiy Pop One', sans-serif; font-size: 14px; color: #fff; background: #FFB25B; border-radius: 999px; padding: 2px 10px; }
+.pl-techou .task.is-done { background: #F3F1EE; border-color: #E3DDD6; box-shadow: 0 4px 0 #D6CEC6; }
+.pl-techou .task.is-done .task-title { color: #A89C92; }
+.pl-techou .task.is-done .task-title::after { content: ""; position: absolute; left: 52px; right: 70px; top: 50%; height: 4px; background: #E85F4B; border-radius: 2px; transform: rotate(-3deg); animation: strike .35s ease-out both; transform-origin: left; }
+@keyframes strike { from { transform: scaleX(0) rotate(-3deg); } to { transform: scaleX(1) rotate(-3deg); } }
+.pl-techou .task.is-done .task-pt { background: #2FAF8E; }
+.pl-techou .task-check { position: absolute; right: -6px; top: -10px; background: #2FAF8E; color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; }
+.pl-techou .pt-pop { position: absolute; right: 50px; top: -6px; font-family: 'Mochiy Pop One', sans-serif; font-size: 24px; color: #F2A93B; animation: rise .9s ease-out both; pointer-events: none; }
+@keyframes rise { from { transform: translateY(10px); opacity: 0; } 30% { opacity: 1; } to { transform: translateY(-26px); opacity: 0; } }
+.pl-techou .empty { text-align: center; color: #7A6252; font-weight: 700; padding: 12px; }
+
+.pl-techou .week-card { background: #fff; border: 3px solid #FFD9B0; border-radius: 22px; padding: 10px 12px; }
+.pl-techou .week-head { display: flex; justify-content: space-between; align-items: baseline; font-weight: 900; color: #B8561B; margin-bottom: 8px; }
+.pl-techou .week-head b { font-family: 'Mochiy Pop One', sans-serif; font-size: 22px; color: #E8618C; }
+.pl-techou .week-row { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.pl-techou .wday { display: flex; flex-direction: column; align-items: center; gap: 2px; background: #FFF6EC; border-radius: 12px; padding: 4px 0; border: 2px solid transparent; }
+.pl-techou .wday small { font-weight: 900; color: #7A6252; }
+.pl-techou .wday span { font-family: 'Mochiy Pop One', sans-serif; color: #D8C2AE; font-size: 16px; }
+.pl-techou .wday.on span { color: #E8618C; }
+.pl-techou .wday.today { border-color: #FFB25B; background: #FFF1E0; }
+
+.pl-techou .star-card { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; background: #fff; border: 3px solid #FFD84D; border-radius: 22px; padding: 10px 14px; font-weight: 900; }
+.pl-techou .star-card b { font-family: 'Mochiy Pop One', sans-serif; font-size: 26px; color: #F2A93B; }
+.pl-techou .star-card small { width: 100%; color: #7A6252; }
+
+.pl-techou .form { display: flex; flex-direction: column; gap: 8px; background: #fff; border-radius: 22px; padding: 14px; border: 3px solid #FFD9B0; }
+.pl-techou .form label, .pl-techou .plabel { font-weight: 900; color: #B8561B; margin-top: 6px; }
+.pl-techou .suggest { display: flex; flex-wrap: wrap; gap: 6px; }
+.pl-techou .suggest button { background: #FFF6EC; border: 2px solid #FFD9B0; border-radius: 999px; padding: 6px 10px; font-weight: 700; font-size: 13px; color: #3A2A22; }
+.pl-techou .icons { display: grid; grid-template-columns: repeat(8, 1fr); gap: 4px; }
+.pl-techou .icons button, .pl-techou .pts button, .pl-techou .days button { background: #FFF6EC; border: 2px solid #FFD9B0; border-radius: 12px; padding: 6px 0; font-size: 20px; color: #3A2A22; font-weight: 900; }
+.pl-techou .pts, .pl-techou .days { display: grid; gap: 6px; }
+.pl-techou .pts { grid-template-columns: repeat(3, 1fr); }
+.pl-techou .days { grid-template-columns: repeat(7, 1fr); }
+.pl-techou .pts button, .pl-techou .days button { font-size: 16px; }
+.pl-techou .icons button.on, .pl-techou .pts button.on, .pl-techou .days button.on { background: #FF8FC4; border-color: #E8618C; color: #fff; }
+
+.pl-techou .bars { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; height: 150px; align-items: end; }
+.pl-techou .bar { height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 2px; }
+.pl-techou .bar-n { font-family: 'Mochiy Pop One', sans-serif; font-size: 13px; color: #E8618C; }
+.pl-techou .bar-fill { width: 70%; background: linear-gradient(#FFB25B, #FF8FC4); border-radius: 8px 8px 2px 2px; min-height: 4px; }
+.pl-techou .bar small { font-weight: 900; color: #7A6252; }
+
+.pl-techou .letter { background: #FFFDF5; border: 3px solid #FFD84D; border-radius: 20px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px;
+  box-shadow: 0 5px 0 rgba(242,169,59,.3); }
+.pl-techou .letter-head { font-weight: 900; color: #C9821B; }
+.pl-techou .letter-body { font-family: 'Mochiy Pop One', sans-serif; font-size: 18px; line-height: 1.7; color: #3A2A22; }
+.pl-techou .letter-advice { background: #EAF6FF; border-radius: 12px; padding: 8px 10px; font-weight: 700; line-height: 1.7; color: #1F6F94; }
+.pl-techou .chara-big { width: 170px; }
+.pl-techou .chara-mini { width: 70px; flex: none; }

@@ -1,0 +1,26 @@
+{
+  "name": "manabi-oukoku",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "scope-css": "node tools/scope-css.mjs",
+    "dev": "npm run scope-css && vite",
+    "build": "npm run scope-css && vite build",
+    "build:single": "npm run scope-css && SINGLE=1 vite build --outDir dist-single",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lz-string": "^1.5.0",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "postcss": "^8.4.47",
+    "postcss-prefix-selector": "^2.1.0",
+    "vite": "^5.4.8",
+    "vite-plugin-singlefile": "^2.0.3"
+  }
+}
