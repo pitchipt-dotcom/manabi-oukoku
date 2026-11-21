@@ -63,6 +63,7 @@ export default function App() {
             {PLACES.map((p, i) => <img key={p.id} src={p.art} alt={p.who} className={`k-cast-${i}`} />)}
           </div>
           <button className="k-start" onClick={() => { syncAutoDone(); setScreen({ name: "home" }); }}>はじめる！</button>
+          <div className="k-label">ぴっちキッズラボ</div>
         </div>
       </div>
     );
@@ -139,6 +140,7 @@ function Home({ kingdom, openPlace, goParent }) {
       </div>
 
       <button className="k-parent-link" onClick={goParent}>👪 おうちの人</button>
+      <div className="k-label">ぴっちキッズラボ</div>
     </div>
   );
 }
